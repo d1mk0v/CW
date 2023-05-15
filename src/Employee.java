@@ -2,14 +2,18 @@ public class Employee {
     private Person person;
     private int department;
     private double salary;
-    private int id;
-    private static int counter = 0;
+    private final int id;
+    private static int counter = 1;
 
     public Employee(Person person, int department, double salary) {
         this.person = person;
         this.department = department;
         this.salary = salary;
         this.id = counter++;
+    }
+
+    public String toString() {
+        return person + ", " + department + ", " + salary + ", " + id;
     }
 
     public Person getPerson() {
